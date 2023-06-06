@@ -1,0 +1,87 @@
+Developer : T.D ~/CodeHut
+Date: 06 May 2023 // 14:00
+Language: Java
+Description: -This document explains how to use the Phasor and Complex DataTypes
+Library Name: ComplexPhasor
+Version: 0.1 [Beta]
+Compilied with Latest JDK ---- JDK20.0.1
+**********************************************************************************
+
+public class Complex
+------------------------------------------------------------------------------------------------------
+  Complex(double Realpart , double Imaginarypart) -> Create an object of type complex.
+
+  Complex() -> Also creates an object of type complex, but without initial Values.
+
+double getReal() -> Returns The real part of the complex number.
+
+double getImag() -> Returns the Imaginary part of the complex number.
+
+void     setReal(double RealPart) -> Sets the RealPart of the complex number to a new value.
+
+void     setImag(double ImagPart) -> Sets the imaginary part of the object to a new value.
+
+Complex Add(Complex Z1 , Complex Z2) -> Finds the sum of two Complex numbers.
+
+Complex Dif(Complex Z1 , Complex Z2) -> Returns Z1 - Z2 .
+
+Complex Mul(Complex Z1 , Complex Z2) -> Returns Z1 x Z2 .
+
+Complex Div(Complex Z1 , Complex Z2) -> Returns Z1 divided by Z2 .
+
+Complex getConjugate() -> Returns the Complex Conjugate .
+
+Phasor getPhasor() -> Returns a Phasor object of the created complex number object[Phase Angle in Degrees].
+
+String show() -> Return a String representation of the object.
+------------------------------------------------------------------------------------------------------
+
+
+
+
+public class Phasor
+------------------------------------------------------------------------------------------------------
+  Phasor(double Magnitude , double Phase_angle) -> Create an object of type Phasor
+
+  Phasor() -> Creates an object of type Phasor without initial values.
+
+double getMag() -> Returns the Magnitude of the Phasor.
+
+double getAng() -> Returns the Phase Angle of the Phasor.
+
+void     setMag(double Magnitude) -> Sets the Magnitude to a new Value.
+
+void     setAng(double Phase_angle) -> Sets the Phase angle to a new Value.
+
+Phasor Add(Phasor P1 , Phasor P2) -> Returns P1 + P2 .
+
+Phasor Dif(Phasor P1 , Phasor P2) -> Returns P1 minus P2 .
+
+Phasor Mul(Phasor P1, Phasor P2) -> Returns the product of two Phasors.
+
+Phasor Div(Phasor P1, Phasor P2) -> Returns the Quotient of Phasor1/Phasor2.
+
+Phasor getConjugate() -> Returns the Complex Conjugate . [in Phasor form] 
+
+Complex getComplex() -> Returns a rectangular complex number object of the created Phasor object.
+
+String show() -> Returns a String representation of the object.
+---------------------------------------------------------------------------------------------------------
+
+
+Examples :
+See The Example.java and Example.class files included in the project.
+
+
+
+
+
+
+Developer Notes:
+Even Though this is one Library ; Two files[Complex.class && Phasor.class] are required for it to run Successfully.
+Because The Rectangular form of the Complex number is so depended on the Polar/Phasor counterpart, The library allows for different  operations.[Crazy Abstraction]
+Even Though Some methods could be made static; I decided against it because Beginner programmers often struggle with reading Documentation and using libraries. [This Library is for EVERYONE]
+The reason behind the two files was to keep the code clean and ensure that future updates are easy.
+
+
+
